@@ -1,0 +1,508 @@
+
+body{
+    background-color: black; 
+    margin-left: 50px;
+    margin-right: 70px;
+} 
+h1{
+    color:rgb(238, 161, 19);
+    margin-top: 30px;
+    margin-left: 60px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* font-family: 'Dancing Script', cursive; */
+}
+
+.noitem{
+    color: white;
+    margin-left: 60px;
+    margin-top: 30px;
+}
+span{
+    color: white;
+}
+.plus{
+    font-size: 23px;
+    border-radius: 50%;
+    background-color:lightskyblue;
+    cursor:pointer;
+    color: white;
+}
+.addplus{
+    position: absolute;
+    top:50px;
+    right:150px;
+}
+.addplus-centered {
+  display: block !important;
+}
+#addplus{
+    position: absolute;
+    top:-130px;
+    left:38.6vw;
+    width: 200px;
+}
+#addplus-centered {
+  display: block !important;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+}
+.popup{
+    background-color:white;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px gray;
+    position: fixed;
+    top:190px;
+    left:35%;
+    width:410px;
+    height: 240px;
+    text-align: center;
+    display: none;
+}
+.popup2{
+    background-color:white;
+    border-radius: 15px;
+    box-shadow: 4px 4px 4px gray;
+    position: fixed;
+    top:170px;
+    left:480px;
+    width:360px;
+    height: 200px;
+    text-align: center;
+    display: none;
+}
+.blur-background {
+    filter: blur(10px); 
+    pointer-events: none; /* Prevent interactions with the blurred background */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 2; /* Place it above everything except the popup */
+    display: none; /* Initially hidden */
+}
+
+.ant{
+    color:orangered;
+    padding-top:20px;
+    margin-bottom: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.ant2{
+    color:orangered;
+    margin-bottom: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+#newtxt{
+    width:380px;
+    height: 40px;
+    border-radius: 50px;
+    text-align: center;
+    border: 2px solid pink;
+    font-size: 17px;
+    box-shadow: 3px 3px 3px rgb(245, 111, 133);
+}
+#items-txt{
+    width:320px;
+    height: 40px;
+    border-radius: 50px;
+    text-align: center;
+    border: 2px solid pink;
+    font-size: 17px;
+    box-shadow: 2px 2px 3px rgb(245, 111, 133);
+}
+
+#newtxt:focus{
+    border: 2px solid pink;
+}
+#newtxt:hover{
+    border:1px solid pink;
+}
+#addcards{
+    margin-top:30px;
+    margin-right: 30px;
+    width: 105px;
+    padding: 16px;
+    color: white;
+    font-size: large;
+    background-color:orangered;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+#addlist{
+    margin-top:20px;
+    margin-right: 30px;
+    width: 105px;
+    padding: 16px;
+    color: white;
+    font-size: large;
+    background-color:orangered;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+#addcards:hover{
+    background-color: transparent;
+    color: orangered;
+    letter-spacing: 3px;
+    border-top: 1px solid orangered;
+    border-bottom: 1px solid orangered;
+
+}
+#addlist:hover{
+    background-color: transparent;
+    color: orangered;
+    letter-spacing: 3px;
+    border-top: 1px solid orangered;
+    border-bottom: 1px solid orangered;
+}
+#close{
+    padding: 16px;
+    width:105px;
+    font-size: large;
+    background-color:orangered;
+    color: white;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+
+}
+#close:hover{
+    background-color: transparent;
+    color: orangered;
+    letter-spacing: 3px;
+    border-top: 1px solid orangered;
+    border-bottom: 1px solid orangered;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left:60px;
+    margin-right:75px;
+    margin-top: 50px;
+}
+
+.items.marked {
+    text-decoration: line-through;
+}
+
+.cards{
+    border-radius: 10px;
+    margin-right: 7px;
+    background-color: white;
+    width:210px;
+    height: 286px;
+    margin-left:20px;
+    margin-bottom: 36px;
+    /* overflow: auto; */
+}
+.cards:hover{
+    box-shadow: 4px 4px 4px gray;
+}
+
+li::marker{
+    /* content:'👉'; */
+     content: '🍦  ';
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 9px;
+    word-wrap: break-word;
+    max-height: 3.5vw;
+    overflow-y: scroll;
+    color: orange;
+    cursor: pointer;
+}
+.addItem,.delete{
+    background-color: white;
+    border:none;
+    cursor: pointer;
+}
+
+.material-symbols-outlined{
+    color:black;
+
+}
+
+.card-buttons{
+   text-align:center;
+}
+.dlt{
+    color:red;
+}
+
+
+ul{
+    list-style:circle;
+    height: 150px;
+    overflow: auto;
+    word-break: break-all;
+
+}
+li{
+    padding-bottom: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.specificCard{
+    position: absolute;
+    z-index: 2;
+    top:180px;
+    left:550px;
+    display: none;
+}
+.back{
+    border-radius: 50%;
+    height: 38px;
+    font-size: xx-large;
+    font-weight: bold;
+    
+}
+.nav span{
+    font-size: 26px;
+    font-weight: bold;
+    color: lightseagreen;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.nav{
+    display: flex;
+    position: absolute;
+    right: 100px;
+    top:-120px;
+    width: 500px;
+}
+.cardtitle{
+    color:orange;
+    font-size: 25px;
+    top:6vw;
+    position: absolute;
+    /* left:0%; */
+    max-width: 40vw;
+    word-break: break-all;
+}
+.specificCardTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checked{
+    text-decoration: line-through;
+    color: red;
+}
+.card_buttons{
+    /* display: flex; 
+    justify-content: space-between;  */
+    margin-right: 0px;
+}
+
+/* media query */
+
+@media (max-width : 450px){
+    body{
+        margin:26px;
+        margin-top: 15px;
+    }
+    #addplus{
+        position: absolute;
+        top: -109px;
+        left:48.6vw;
+    }
+    .addplus{
+        position: absolute;
+        top: 89px;
+        right: 49px;
+    }
+    h1{
+        margin-left: -10px;
+        font-size:37px;
+    }
+    .container{
+        margin-top: 78px;
+        margin-left: 10px;
+        margin-right: 0px;
+        display: block;
+    }
+    .noitem{
+        margin: 0px;
+        margin-top: 76px;
+        font-family: monospace;
+        color: crimson;
+    }
+    .cards{
+        width:84%;
+        height:auto;
+        margin-top: 20px;
+    }
+    .title{
+        padding-top: 10px;
+        padding-bottom: 5px;
+        font-size: 26px;
+        max-height: 9vw;
+    }
+    .cardtitle{
+        top:18vw;
+        /* left:20%; */
+        max-width: 77vw;
+        position: static;
+        max-height: 17vw;
+        overflow: scroll;
+        font-size: 25px;
+    }
+    li{
+        font-size: 18.5px;
+    }
+    ul{
+        word-break: break-all;
+    }
+    .popup{
+        position: fixed;
+        top:140px;
+        left:12px;
+        width:92%;
+        height: 210px;
+        /* height: 37%; */
+    }
+    #newtxt{
+        width:93%;
+    }
+    .ant{
+        padding-top: 0px;
+    }
+    .popup2{
+        position: fixed;
+        top:160px;
+        left:12px;
+        width:92%;
+    }
+    #items-txt{
+        width:90%;
+    }
+    .specificCard{
+        position: absolute;
+        z-index: 2;
+        top:120px;
+        left:30px;
+        width:85%;
+        margin-top: 25vw;
+    }
+    .nav{
+        display: flex;
+        position: absolute;
+        left:10px;
+        top:-70px;
+        width: fit-content;
+    }
+    /* .popup2{
+        width:60%;
+    } */
+}
+
+/* media queries -tab */
+
+@media (min-width:500px) and (max-width:960px){
+    h1{
+        font-size: 60px;
+        margin-left: 10px;
+        margin-top: 30px;
+    }
+    a{
+        font-size: 40px;
+    }
+    .addplus{
+        position: absolute;
+        right:45px;
+    }
+    .plus{
+        font-size: 40px;
+    }
+    .noitem{
+        font-family: monospace;
+        color: crimson;
+        font-size:x-large;
+        margin-left: 5px;
+    }
+    .popup{
+        position: fixed;
+        left:130px;
+        width:66%;
+    }
+    .ant{
+        font-size: 35px;
+        margin-top: 5px;
+    }
+    #newtxt{
+        width:88%;
+        font-size:x-large;
+        height: 20%;
+    }
+    .container{
+        margin: 10px;
+    }
+    .cards{
+        width:52%;
+        height:44vw;
+        margin-left: 0px;
+    }
+    .title{
+        font-size: xx-large;
+        max-height: 11vw;
+    }
+    .popup2{
+        position: fixed;
+        left:130px;
+        top:210px;
+        width:60%;
+    }
+    #items-txt{
+        width:88%;
+    }
+    li{
+        font-size: 24px; 
+    }
+    ul{
+        margin-left: 20px;
+        /* height: 190px; */
+        height: 21vw;
+    }
+    .specificCard{
+        position: absolute;
+        left:210px;
+        width:100%;
+        margin-top: 10vw;
+    }
+    .specificCard span{
+        font-size: 40px;
+    }
+    .back{
+        height: 250%;
+        font-size: 50px;
+    }
+    .cardtitle{
+        font-size: 35px;
+        position: static;
+        max-width: 50vw;
+        max-height: 10vw;
+        overflow: auto;
+    }
+    .nav{
+        left:-20vw;
+    }
+    #addplus{
+        width:27vw;
+    }
+    .container{
+        justify-content: center;
+    }
+}
